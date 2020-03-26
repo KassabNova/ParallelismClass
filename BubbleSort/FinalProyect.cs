@@ -10,8 +10,8 @@ namespace BubbleSort
     {
 
         private static  int MAXELEMS = 10000000;
-        private static int DEFELEMS = 200000;
-        private static int MINELEMS = 0;
+        private static int DEFELEMS = 400000;
+        private static int MINELEMS = 100000;
 		private static readonly RNGCryptoServiceProvider _generator = new RNGCryptoServiceProvider();
 		private const int maxNumber = 100;
 		private const int minNumber = 1;
@@ -75,6 +75,9 @@ namespace BubbleSort
 			//ShowResults();
 			Console.WriteLine($"###Errores {errores}");
 			Console.WriteLine($"###Elapsed Time: {time}");
+			Console.Write($"###Press a Key to exit");
+			//Prevent console from closing
+			Console.ReadKey();
 		}
 
 		public static void sort(int[] inicio, int elems)
